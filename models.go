@@ -412,6 +412,23 @@ type Device struct {
 	Duties           []string              `json:"duties,omitempty"`
 }
 
+// DeviceZone represents the zone of a device with its discriminator (ID)
+type DeviceZone struct {
+	Discriminator int16 `json:"discriminator"`
+}
+
+// DeviceListEntry represents a tado° device including details
+type DeviceListEntry struct {
+	Type   string      `json:"type"`
+	Device *Device     `json:"device"`
+	Zone   *DeviceZone `json:"zone,omitempty"`
+}
+
+// DeviceList reperesents a list of the tado° devices including details
+type DeviceList struct {
+	Entries []DeviceListEntry `json:"entries"`
+}
+
 // DeviceConnectionState specifies if the device is connected or not
 type DeviceConnectionState struct {
 	Value     bool      `json:"value"`

@@ -312,6 +312,15 @@ func GetDevices(client *Client, userHome *UserHome) ([]*Device, error) {
 	return devices, nil
 }
 
+// GetDevices lists all devices in the given home including details
+func GetDeviceList(client *Client, userHome *UserHome) (*DeviceList, error) {
+	deviceList := &DeviceList{}
+	if err := client.get(apiURL("homes/%d/deviceList", userHome.ID), &deviceList); err != nil {
+		return nil, err
+	}
+	return deviceList, nil
+}
+
 // GetInstallations lists all installations in the given home
 func GetInstallations(client *Client, userHome *UserHome) ([]*Installation, error) {
 	installations := make([]*Installation, 0)
