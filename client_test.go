@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
+	oauth2int "github.com/flipkick/gotado/internal/oauth2"
 	"github.com/golang/mock/gomock"
-	oauth2int "github.com/gonzolino/gotado/internal/oauth2"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/oauth2"
 )

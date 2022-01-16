@@ -1,4 +1,4 @@
-module github.com/gonzolino/gotado
+module github.com/flipkick/gotado
 
 go 1.16
 

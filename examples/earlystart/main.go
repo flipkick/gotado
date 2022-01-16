@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/gonzolino/gotado"
+	"github.com/flipkick/gotado"
 )
 
 const (

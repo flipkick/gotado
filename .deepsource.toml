@@ -5,7 +5,7 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_paths = ["github.com/gonzolino/gotado"]
+  import_paths = ["github.com/flipkick/gotado"]
 
 [[analyzers]]
 name = "test-coverage"
