@@ -366,3 +366,8 @@ func GetTemperatureOffset(client *Client, device *Device) (*TemperatureOffset, e
 	}
 	return temperatureOffset, nil
 }
+
+// SetTemperatureOffset sets the temperature offset for a given tado° device
+func SetTemperatureOffset(client *Client, device *Device, temperatureOffset *TemperatureOffset) error {
+	return client.put(apiURL("devices/%s/temperatureOffset", device.SerialNo), temperatureOffset)
+}
